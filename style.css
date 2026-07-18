@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#1d4350,#a43931);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    flex-wrap:wrap;
+    padding:20px;
+    transition:.4s;
+}
+
+/* Dark Mode */
+
+body.dark{
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+}
+
+/* Calculator */
+
+.calculator{
+    width:340px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+.calculator h2{
+    color:#fff;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+/* Display */
+
+#display{
+    width:100%;
+    height:65px;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    padding:15px;
+    font-size:28px;
+    text-align:right;
+    margin-bottom:18px;
+}
+
+/* Buttons */
+
+.buttons{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+}
+
+button{
+    height:60px;
+    border:none;
+    border-radius:12px;
+    font-size:20px;
+    cursor:pointer;
+    transition:.25s;
+    background:#5d6673;
+    color:white;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+.operator{
+    background:#ff9800;
+}
+
+.equal{
+    background:#34c759;
+}
+
+/* Theme Button */
+
+#themeBtn{
+    position:fixed;
+    top:20px;
+    right:20px;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#444;
+    color:white;
+    font-size:20px;
+}
+
+/* Side Panel */
+
+.side-panel{
+    width:250px;
+}
+
+#clock{
+    color:white;
+    font-size:30px;
+    font-weight:bold;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+/* History */
+
+.history-box{
+    background:rgba(255,255,255,.12);
+    border-radius:15px;
+    padding:15px;
+    color:white;
+    max-height:300px;
+    overflow-y:auto;
+}
+
+.history-box h3{
+    margin-bottom:10px;
+}
+
+#history{
+    list-style:none;
+}
+
+#history li{
+    margin-bottom:8px;
+    border-bottom:1px solid rgba(255,255,255,.2);
+    padding-bottom:5px;
+}
+
+/* Footer */
+
+.footer{
+    position:fixed;
+    bottom:10px;
+    width:100%;
+    text-align:center;
+    color:white;
+    font-size:14px;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+body{
+    flex-direction:column;
+}
+
+.side-panel{
+    width:340px;
+}
+
+}
+
+@media(max-width:400px){
+
+.calculator{
+    width:95%;
+}
+
+.side-panel{
+    width:95%;
+}
+
+button{
+    height:55px;
+    font-size:18px;
+}
+
+}
